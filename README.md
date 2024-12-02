@@ -1,40 +1,24 @@
-# Bio_ClinicalBERT-fine-tuned
+# Toxicity Detection in Online Comments
 
-This model is a fine-tuned version of emilyalsentzer/Bio_ClinicalBERT on an duxprajapati/symptom-disease-dataset. 
-It achieves the following results on the evaluation set:
+This project focuses on detecting and classifying toxic comments using machine learning models. The goal is to identify harmful online content efficiently and accurately, aiding content moderation and fostering healthier online interactions.
 
-Loss: 0.1920
-Precision: 0.7879
-Recall: 0.8752
-F1: 0.8292
-Accuracy: 0.9456
-Model description
-More information needed
+# Objective: 
 
-Intended uses & limitations
-More information needed
+Develop and evaluate a model to classify comments as "Toxic" or "Non-toxic" using advanced NLP techniques.
+Dataset: Utilizes a public dataset from Civil Comments, extended by Jigsaw with additional labels for toxicity and identity mentions.
+Model: Implements the pre-trained unitary/toxic-bert model for text classification.
 
-Training and evaluation data
-More information needed
 
-Training procedure
-Training hyperparameters
-The following hyperparameters were used during training:
+# Steps:
+1. Preprocess data (cleaning, tokenization, etc.).
 
-Training Configuration
-Model: emilyalsentzer/Bio_ClinicalBERT
-Learning Rate: 2e-5
-Train Batch Size: 8
-Eval Batch Size: 8
-Seed: 42
-Optimizer: Used AdamW (from PyTorch) with:
-Betas: (0.9, 0.999)
-Epsilon: 1e-08
-Additional Optimizer Arguments: None
-Learning Rate Scheduler Type: linear
-Number of Epochs: 3
-Weight Decay: 0.01
-Evaluation Strategy: epoch
-Max Sequence Length: 512
-Gradient Accumulation Steps: 1
-Mixed Precision: Disabled (since running on CPU or MPS)
+2. Train and predict toxicity using a BERT-based pipeline.
+
+3. Evaluate performance through accuracy and confusion matrix analysis.
+
+4. Results: Achieved a classification accuracy of 80.50%, with performance insights from the confusion matrix.
+
+# Tools Used:
+NLP: transformers, nltk, datasets
+Visualization: seaborn, matplotlib
+Evaluation: sklearn
